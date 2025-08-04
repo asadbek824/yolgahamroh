@@ -6,8 +6,38 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		3B9D78ED2E3CC8EC00E5C72B /* Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B9D78EB2E3CC85800E5C72B /* Home.framework */; };
+		3B9D78EE2E3CC8EC00E5C72B /* Home.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3B9D78EB2E3CC85800E5C72B /* Home.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3B9D78EA2E3CC85800E5C72B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B9D78D02E3CC82D00E5C72B /* HomeFeature.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3B9D78DB2E3CC84100E5C72B;
+			remoteInfo = Home;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3B9D78EF2E3CC8EC00E5C72B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3B9D78EE2E3CC8EC00E5C72B /* Home.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		3B9D78A82E3CBFAF00E5C72B /* YolgaHamroh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YolgaHamroh.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B9D78D02E3CC82D00E5C72B /* HomeFeature.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = HomeFeature.xcodeproj; path = HomeFeature/HomeFeature.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -23,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B9D78ED2E3CC8EC00E5C72B /* Home.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -33,6 +64,8 @@
 			isa = PBXGroup;
 			children = (
 				3B9D78AA2E3CBFAF00E5C72B /* YolgaHamroh */,
+				3B9D78B82E3CC80C00E5C72B /* Features */,
+				3B9D78EC2E3CC8EC00E5C72B /* Frameworks */,
 				3B9D78A92E3CBFAF00E5C72B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -45,6 +78,29 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		3B9D78B82E3CC80C00E5C72B /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				3B9D78D02E3CC82D00E5C72B /* HomeFeature.xcodeproj */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		3B9D78D12E3CC82D00E5C72B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3B9D78EB2E3CC85800E5C72B /* Home.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3B9D78EC2E3CC8EC00E5C72B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -55,6 +111,7 @@
 				3B9D78A42E3CBFAF00E5C72B /* Sources */,
 				3B9D78A52E3CBFAF00E5C72B /* Frameworks */,
 				3B9D78A62E3CBFAF00E5C72B /* Resources */,
+				3B9D78EF2E3CC8EC00E5C72B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -97,12 +154,28 @@
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 3B9D78A92E3CBFAF00E5C72B /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 3B9D78D12E3CC82D00E5C72B /* Products */;
+					ProjectRef = 3B9D78D02E3CC82D00E5C72B /* HomeFeature.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				3B9D78A72E3CBFAF00E5C72B /* YolgaHamroh */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		3B9D78EB2E3CC85800E5C72B /* Home.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Home.framework;
+			remoteRef = 3B9D78EA2E3CC85800E5C72B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		3B9D78A62E3CBFAF00E5C72B /* Resources */ = {
