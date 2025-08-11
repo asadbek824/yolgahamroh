@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B0439552E40BA0C002BB867 /* CoreUIElements.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B0439542E40BA0C002BB867 /* CoreUIElements.framework */; };
+		3B0742C52E40BCDC00C49174 /* CoreExtentions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B0742C42E40BCDC00C49174 /* CoreExtentions.framework */; };
+		3B0742C82E40C2AB00C49174 /* RideCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0742C72E40C2AB00C49174 /* RideCardView.swift */; };
+		3B22878D2E436F3700174371 /* DesignSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B22878C2E436F3700174371 /* DesignSystem.framework */; };
 		3B9D78E32E3CC84100E5C72B /* Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B9D78DB2E3CC84100E5C72B /* Home.framework */; };
 		3B9D78E42E3CC84100E5C72B /* Home.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3B9D78DB2E3CC84100E5C72B /* Home.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3B9D78FD2E3CD79E00E5C72B /* HomeDesignSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B9D78F52E3CD79E00E5C72B /* HomeDesignSystem.framework */; };
-		3B9D78FE2E3CD79E00E5C72B /* HomeDesignSystem.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3B9D78F52E3CD79E00E5C72B /* HomeDesignSystem.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3B9D79082E3CD7CD00E5C72B /* HomeDesignSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B9D78F52E3CD79E00E5C72B /* HomeDesignSystem.framework */; };
-		3B9D79092E3CD7CD00E5C72B /* HomeDesignSystem.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3B9D78F52E3CD79E00E5C72B /* HomeDesignSystem.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3B9D83702E40B46600E5C72B /* Home.docc in Sources */ = {isa = PBXBuildFile; fileRef = 3B9D836D2E40B46600E5C72B /* Home.docc */; };
+		3B9D83712E40B46600E5C72B /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B9D836E2E40B46600E5C72B /* Home.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,20 +25,6 @@
 			remoteGlobalIDString = 3B9D78DA2E3CC84100E5C72B;
 			remoteInfo = Home;
 		};
-		3B9D78FB2E3CD79E00E5C72B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3B9D78BA2E3CC82B00E5C72B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3B9D78F42E3CD79E00E5C72B;
-			remoteInfo = HomeDesignSystem;
-		};
-		3B9D79052E3CD7BE00E5C72B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3B9D78BA2E3CC82B00E5C72B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3B9D78F42E3CD79E00E5C72B;
-			remoteInfo = HomeDesignSystem;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -46,19 +34,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				3B9D78FE2E3CD79E00E5C72B /* HomeDesignSystem.framework in Embed Frameworks */,
 				3B9D78E42E3CC84100E5C72B /* Home.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3B9D790A2E3CD7CD00E5C72B /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				3B9D79092E3CD7CD00E5C72B /* HomeDesignSystem.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -66,25 +42,21 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3B0439302E40B8FF002BB867 /* CoreUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B0439542E40BA0C002BB867 /* CoreUIElements.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreUIElements.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B0742C42E40BCDC00C49174 /* CoreExtentions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreExtentions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B0742C72E40C2AB00C49174 /* RideCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideCardView.swift; sourceTree = "<group>"; };
+		3B22878C2E436F3700174371 /* DesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B9D78C22E3CC82B00E5C72B /* HomeFeature.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeFeature.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B9D78DB2E3CC84100E5C72B /* Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Home.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B9D78F52E3CD79E00E5C72B /* HomeDesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HomeDesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B9D836D2E40B46600E5C72B /* Home.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Home.docc; sourceTree = "<group>"; };
+		3B9D836E2E40B46600E5C72B /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		3B9D78C42E3CC82B00E5C72B /* HomeFeature */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = HomeFeature;
-			sourceTree = "<group>";
-		};
-		3B9D78DC2E3CC84100E5C72B /* Home */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Home;
-			sourceTree = "<group>";
-		};
-		3B9D78F62E3CD79E00E5C72B /* HomeDesignSystem */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = HomeDesignSystem;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -94,7 +66,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B9D78FD2E3CD79E00E5C72B /* HomeDesignSystem.framework in Frameworks */,
 				3B9D78E32E3CC84100E5C72B /* Home.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -103,14 +74,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B9D79082E3CD7CD00E5C72B /* HomeDesignSystem.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3B9D78F22E3CD79E00E5C72B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				3B22878D2E436F3700174371 /* DesignSystem.framework in Frameworks */,
+				3B0742C52E40BCDC00C49174 /* CoreExtentions.framework in Frameworks */,
+				3B0439552E40BA0C002BB867 /* CoreUIElements.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,8 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				3B9D78C42E3CC82B00E5C72B /* HomeFeature */,
-				3B9D78DC2E3CC84100E5C72B /* Home */,
-				3B9D78F62E3CD79E00E5C72B /* HomeDesignSystem */,
+				3B9D836F2E40B46600E5C72B /* Home */,
 				3B9D79022E3CD7BE00E5C72B /* Frameworks */,
 				3B9D78C32E3CC82B00E5C72B /* Products */,
 			);
@@ -133,7 +98,6 @@
 			children = (
 				3B9D78C22E3CC82B00E5C72B /* HomeFeature.app */,
 				3B9D78DB2E3CC84100E5C72B /* Home.framework */,
-				3B9D78F52E3CD79E00E5C72B /* HomeDesignSystem.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -141,21 +105,28 @@
 		3B9D79022E3CD7BE00E5C72B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3B22878C2E436F3700174371 /* DesignSystem.framework */,
+				3B0742C42E40BCDC00C49174 /* CoreExtentions.framework */,
+				3B0439542E40BA0C002BB867 /* CoreUIElements.framework */,
+				3B0439302E40B8FF002BB867 /* CoreUI.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3B9D836F2E40B46600E5C72B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				3B9D836D2E40B46600E5C72B /* Home.docc */,
+				3B9D836E2E40B46600E5C72B /* Home.swift */,
+				3B0742C72E40C2AB00C49174 /* RideCardView.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
 		3B9D78D62E3CC84100E5C72B /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3B9D78F02E3CD79E00E5C72B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -178,7 +149,6 @@
 			);
 			dependencies = (
 				3B9D78E22E3CC84100E5C72B /* PBXTargetDependency */,
-				3B9D78FC2E3CD79E00E5C72B /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				3B9D78C42E3CC82B00E5C72B /* HomeFeature */,
@@ -198,44 +168,16 @@
 				3B9D78D72E3CC84100E5C72B /* Sources */,
 				3B9D78D82E3CC84100E5C72B /* Frameworks */,
 				3B9D78D92E3CC84100E5C72B /* Resources */,
-				3B9D790A2E3CD7CD00E5C72B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				3B9D79062E3CD7BE00E5C72B /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				3B9D78DC2E3CC84100E5C72B /* Home */,
 			);
 			name = Home;
 			packageProductDependencies = (
 			);
 			productName = Home;
 			productReference = 3B9D78DB2E3CC84100E5C72B /* Home.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		3B9D78F42E3CD79E00E5C72B /* HomeDesignSystem */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3B9D78FF2E3CD79E00E5C72B /* Build configuration list for PBXNativeTarget "HomeDesignSystem" */;
-			buildPhases = (
-				3B9D78F02E3CD79E00E5C72B /* Headers */,
-				3B9D78F12E3CD79E00E5C72B /* Sources */,
-				3B9D78F22E3CD79E00E5C72B /* Frameworks */,
-				3B9D78F32E3CD79E00E5C72B /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				3B9D78F62E3CD79E00E5C72B /* HomeDesignSystem */,
-			);
-			name = HomeDesignSystem;
-			packageProductDependencies = (
-			);
-			productName = HomeDesignSystem;
-			productReference = 3B9D78F52E3CD79E00E5C72B /* HomeDesignSystem.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -252,9 +194,6 @@
 						CreatedOnToolsVersion = 16.4;
 					};
 					3B9D78DA2E3CC84100E5C72B = {
-						CreatedOnToolsVersion = 16.4;
-					};
-					3B9D78F42E3CD79E00E5C72B = {
 						CreatedOnToolsVersion = 16.4;
 					};
 				};
@@ -277,7 +216,6 @@
 			targets = (
 				3B9D78C12E3CC82B00E5C72B /* HomeFeature */,
 				3B9D78DA2E3CC84100E5C72B /* Home */,
-				3B9D78F42E3CD79E00E5C72B /* HomeDesignSystem */,
 			);
 		};
 /* End PBXProject section */
@@ -291,13 +229,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		3B9D78D92E3CC84100E5C72B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3B9D78F32E3CD79E00E5C72B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -318,13 +249,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3B9D78F12E3CD79E00E5C72B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				3B9D83702E40B46600E5C72B /* Home.docc in Sources */,
+				3B9D83712E40B46600E5C72B /* Home.swift in Sources */,
+				3B0742C82E40C2AB00C49174 /* RideCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,16 +262,6 @@
 			isa = PBXTargetDependency;
 			target = 3B9D78DA2E3CC84100E5C72B /* Home */;
 			targetProxy = 3B9D78E12E3CC84100E5C72B /* PBXContainerItemProxy */;
-		};
-		3B9D78FC2E3CD79E00E5C72B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3B9D78F42E3CD79E00E5C72B /* HomeDesignSystem */;
-			targetProxy = 3B9D78FB2E3CD79E00E5C72B /* PBXContainerItemProxy */;
-		};
-		3B9D79062E3CD7BE00E5C72B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3B9D78F42E3CD79E00E5C72B /* HomeDesignSystem */;
-			targetProxy = 3B9D79052E3CD7BE00E5C72B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -612,84 +529,6 @@
 			};
 			name = Release;
 		};
-		3B9D79002E3CD79E00E5C72B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
-				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
-				PRODUCT_BUNDLE_IDENTIFIER = AssA.HomeDesignSystem;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_INSTALL_MODULE = YES;
-				SWIFT_INSTALL_OBJC_HEADER = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		3B9D79012E3CD79E00E5C72B /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_MODULE_VERIFIER = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
-				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
-				PRODUCT_BUNDLE_IDENTIFIER = AssA.HomeDesignSystem;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
-				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_INSTALL_MODULE = YES;
-				SWIFT_INSTALL_OBJC_HEADER = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -716,15 +555,6 @@
 			buildConfigurations = (
 				3B9D78E62E3CC84100E5C72B /* Debug */,
 				3B9D78E72E3CC84100E5C72B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3B9D78FF2E3CD79E00E5C72B /* Build configuration list for PBXNativeTarget "HomeDesignSystem" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3B9D79002E3CD79E00E5C72B /* Debug */,
-				3B9D79012E3CD79E00E5C72B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

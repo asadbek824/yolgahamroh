@@ -24,6 +24,29 @@
         }
       }
     },
+    "nav_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Companion"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Попутчик"
+          }
+        },
+        "uz" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yo‘lga hamroh"
+          }
+        }
+      }
+    },
     "search_button" : {
       "extractionState" : "manual",
       "localizations" : {

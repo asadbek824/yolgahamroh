@@ -7,4 +7,8 @@
 
 import Foundation
 
-public final class HomeDesignSystem { init() {} }
+public enum DesignStrings {
+    public static var homeTitle: String { BundleFinder.localized("home_title") }
+    public static var searchButton: String { BundleFinder.localized("search_button") }
+    public static var navTitle: String { BundleFinder.localized("nav_title") }
+}

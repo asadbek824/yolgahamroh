@@ -6,13 +6,13 @@
 //
 
 import SwiftUI
-import Home
+import AppNavigation
 
 @main
 struct YolgaHamrohApp: App {
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            AppRootView()
         }
     }
 }
