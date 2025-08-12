@@ -73,6 +73,7 @@
 		3B074A4D2E40EA6B00C49174 /* DesignSystem.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DesignSystem.xcodeproj; path = DesignSystem/DesignSystem.xcodeproj; sourceTree = "<group>"; };
 		3B9D78A82E3CBFAF00E5C72B /* YolgaHamroh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YolgaHamroh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B9D78D02E3CC82D00E5C72B /* HomeFeature.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = HomeFeature.xcodeproj; path = HomeFeature/HomeFeature.xcodeproj; sourceTree = "<group>"; };
+		476D156F2E4B4DD70023F067 /* ProfileFeature.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ProfileFeature.xcodeproj; path = ProfileFeature/ProfileFeature.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -159,6 +160,7 @@
 		3B9D78B82E3CC80C00E5C72B /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				476D156F2E4B4DD70023F067 /* ProfileFeature.xcodeproj */,
 				3B9D78D02E3CC82D00E5C72B /* HomeFeature.xcodeproj */,
 			);
 			path = Features;
@@ -188,6 +190,13 @@
 				3B0439492E40B9C3002BB867 /* CoreUIElements.xcodeproj */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		476D15702E4B4DD70023F067 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +276,10 @@
 				{
 					ProductGroup = 3B9D78D12E3CC82D00E5C72B /* Products */;
 					ProjectRef = 3B9D78D02E3CC82D00E5C72B /* HomeFeature.xcodeproj */;
+				},
+				{
+					ProductGroup = 476D15702E4B4DD70023F067 /* Products */;
+					ProjectRef = 476D156F2E4B4DD70023F067 /* ProfileFeature.xcodeproj */;
 				},
 			);
 			projectRoot = "";

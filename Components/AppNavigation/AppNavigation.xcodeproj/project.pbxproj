@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		3B0749EC2E40D7C200C49174 /* Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B0749EB2E40D7C200C49174 /* Home.framework */; };
 		3B0749ED2E40D7C200C49174 /* Home.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3B0749EB2E40D7C200C49174 /* Home.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		476D15972E4B50560023F067 /* Profile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 476D15962E4B50560023F067 /* Profile.framework */; };
+		476D15982E4B50560023F067 /* Profile.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 476D15962E4B50560023F067 /* Profile.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -18,6 +20,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				476D15982E4B50560023F067 /* Profile.framework in Embed Frameworks */,
 				3B0749ED2E40D7C200C49174 /* Home.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -28,6 +31,7 @@
 /* Begin PBXFileReference section */
 		3B0749D42E40D74B00C49174 /* AppNavigation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AppNavigation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B0749EB2E40D7C200C49174 /* Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Home.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		476D15962E4B50560023F067 /* Profile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Profile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -43,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				476D15972E4B50560023F067 /* Profile.framework in Frameworks */,
 				3B0749EC2E40D7C200C49174 /* Home.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -70,6 +75,7 @@
 		3B0749EA2E40D7C200C49174 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				476D15962E4B50560023F067 /* Profile.framework */,
 				3B0749EB2E40D7C200C49174 /* Home.framework */,
 			);
 			name = Frameworks;
