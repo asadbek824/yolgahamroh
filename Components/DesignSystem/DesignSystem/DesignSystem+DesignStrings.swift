@@ -14,5 +14,6 @@ public extension DesignSystemProvider {
             return NSLocalizedString(key, bundle: bundle, comment: "")
         }
         public static var homeNavTitle: String { localized("home_nav_title") }
+        public static var settings: String { localized("settings") }
     }
 }

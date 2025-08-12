@@ -7,6 +7,8 @@
 
 import SwiftUI
 import Home
+import Profile
+import DesignSystem
 
 public struct AppRootView: View {
     @StateObject private var coordinator = AppNavigationCoordinator()
@@ -27,13 +29,13 @@ public struct AppRootView: View {
                 }
                 .tag(AppNavigationCoordinator.Tab.trips)
 
-            Text("Избранное")
+            Text(DesignSystemProvider.DesignSystemsStrings.settings)
                 .tabItem {
                     Label("Избранное", systemImage: "heart")
                 }
                 .tag(AppNavigationCoordinator.Tab.favorites)
 
-            Text("Профиль")
+            ProfileContentView()
                 .tabItem {
                     Label("Профиль", systemImage: "person")
                 }
