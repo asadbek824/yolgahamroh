@@ -6,68 +6,49 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		3B9C2AC22E4CD18400DCB472 /* CoreModels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B9C2AC12E4CD18400DCB472 /* CoreModels.framework */; };
-		3B9C2AC62E4CD19300DCB472 /* CoreStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B9C2AC52E4CD19300DCB472 /* CoreStorage.framework */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXFileReference section */
-		3B074A1B2E40E80E00C49174 /* CoreServices.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreServices.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B9C2AC12E4CD18400DCB472 /* CoreModels.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreModels.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B9C2AC52E4CD19300DCB472 /* CoreStorage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreStorage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B9C2A662E4CCEB900DCB472 /* CoreStorage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreStorage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		3B074A1D2E40E80E00C49174 /* CoreServices */ = {
+		3B9C2A682E4CCEB900DCB472 /* CoreStorage */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = CoreServices;
+			path = CoreStorage;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3B074A182E40E80E00C49174 /* Frameworks */ = {
+		3B9C2A632E4CCEB900DCB472 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B9C2AC22E4CD18400DCB472 /* CoreModels.framework in Frameworks */,
-				3B9C2AC62E4CD19300DCB472 /* CoreStorage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3B074A112E40E80E00C49174 = {
+		3B9C2A5C2E4CCEB900DCB472 = {
 			isa = PBXGroup;
 			children = (
-				3B074A1D2E40E80E00C49174 /* CoreServices */,
-				3B9C2AC02E4CD18400DCB472 /* Frameworks */,
-				3B074A1C2E40E80E00C49174 /* Products */,
+				3B9C2A682E4CCEB900DCB472 /* CoreStorage */,
+				3B9C2A672E4CCEB900DCB472 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		3B074A1C2E40E80E00C49174 /* Products */ = {
+		3B9C2A672E4CCEB900DCB472 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3B074A1B2E40E80E00C49174 /* CoreServices.framework */,
+				3B9C2A662E4CCEB900DCB472 /* CoreStorage.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		3B9C2AC02E4CD18400DCB472 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				3B9C2AC52E4CD19300DCB472 /* CoreStorage.framework */,
-				3B9C2AC12E4CD18400DCB472 /* CoreModels.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		3B074A162E40E80E00C49174 /* Headers */ = {
+		3B9C2A612E4CCEB900DCB472 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -77,65 +58,65 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		3B074A1A2E40E80E00C49174 /* CoreServices */ = {
+		3B9C2A652E4CCEB900DCB472 /* CoreStorage */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3B074A242E40E80E00C49174 /* Build configuration list for PBXNativeTarget "CoreServices" */;
+			buildConfigurationList = 3B9C2A6F2E4CCEB900DCB472 /* Build configuration list for PBXNativeTarget "CoreStorage" */;
 			buildPhases = (
-				3B074A162E40E80E00C49174 /* Headers */,
-				3B074A172E40E80E00C49174 /* Sources */,
-				3B074A182E40E80E00C49174 /* Frameworks */,
-				3B074A192E40E80E00C49174 /* Resources */,
+				3B9C2A612E4CCEB900DCB472 /* Headers */,
+				3B9C2A622E4CCEB900DCB472 /* Sources */,
+				3B9C2A632E4CCEB900DCB472 /* Frameworks */,
+				3B9C2A642E4CCEB900DCB472 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				3B074A1D2E40E80E00C49174 /* CoreServices */,
+				3B9C2A682E4CCEB900DCB472 /* CoreStorage */,
 			);
-			name = CoreServices;
+			name = CoreStorage;
 			packageProductDependencies = (
 			);
-			productName = CoreServices;
-			productReference = 3B074A1B2E40E80E00C49174 /* CoreServices.framework */;
+			productName = CoreStorage;
+			productReference = 3B9C2A662E4CCEB900DCB472 /* CoreStorage.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		3B074A122E40E80E00C49174 /* Project object */ = {
+		3B9C2A5D2E4CCEB900DCB472 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1640;
 				LastUpgradeCheck = 1640;
 				TargetAttributes = {
-					3B074A1A2E40E80E00C49174 = {
+					3B9C2A652E4CCEB900DCB472 = {
 						CreatedOnToolsVersion = 16.4;
 					};
 				};
 			};
-			buildConfigurationList = 3B074A152E40E80E00C49174 /* Build configuration list for PBXProject "CoreServices" */;
+			buildConfigurationList = 3B9C2A602E4CCEB900DCB472 /* Build configuration list for PBXProject "CoreStorage" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 3B074A112E40E80E00C49174;
+			mainGroup = 3B9C2A5C2E4CCEB900DCB472;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 3B074A1C2E40E80E00C49174 /* Products */;
+			productRefGroup = 3B9C2A672E4CCEB900DCB472 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3B074A1A2E40E80E00C49174 /* CoreServices */,
+				3B9C2A652E4CCEB900DCB472 /* CoreStorage */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		3B074A192E40E80E00C49174 /* Resources */ = {
+		3B9C2A642E4CCEB900DCB472 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -145,7 +126,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3B074A172E40E80E00C49174 /* Sources */ = {
+		3B9C2A622E4CCEB900DCB472 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -155,7 +136,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		3B074A222E40E80E00C49174 /* Debug */ = {
+		3B9C2A6D2E4CCEB900DCB472 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -222,7 +203,7 @@
 			};
 			name = Debug;
 		};
-		3B074A232E40E80E00C49174 /* Release */ = {
+		3B9C2A6E2E4CCEB900DCB472 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -282,7 +263,7 @@
 			};
 			name = Release;
 		};
-		3B074A252E40E80E00C49174 /* Debug */ = {
+		3B9C2A702E4CCEB900DCB472 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
@@ -305,7 +286,7 @@
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
-				PRODUCT_BUNDLE_IDENTIFIER = AssA.CoreServices;
+				PRODUCT_BUNDLE_IDENTIFIER = AssA.CoreStorage;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -320,7 +301,7 @@
 			};
 			name = Debug;
 		};
-		3B074A262E40E80E00C49174 /* Release */ = {
+		3B9C2A712E4CCEB900DCB472 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
@@ -343,7 +324,7 @@
 				MARKETING_VERSION = 1.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
-				PRODUCT_BUNDLE_IDENTIFIER = AssA.CoreServices;
+				PRODUCT_BUNDLE_IDENTIFIER = AssA.CoreStorage;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -361,25 +342,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3B074A152E40E80E00C49174 /* Build configuration list for PBXProject "CoreServices" */ = {
+		3B9C2A602E4CCEB900DCB472 /* Build configuration list for PBXProject "CoreStorage" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3B074A222E40E80E00C49174 /* Debug */,
-				3B074A232E40E80E00C49174 /* Release */,
+				3B9C2A6D2E4CCEB900DCB472 /* Debug */,
+				3B9C2A6E2E4CCEB900DCB472 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3B074A242E40E80E00C49174 /* Build configuration list for PBXNativeTarget "CoreServices" */ = {
+		3B9C2A6F2E4CCEB900DCB472 /* Build configuration list for PBXNativeTarget "CoreStorage" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3B074A252E40E80E00C49174 /* Debug */,
-				3B074A262E40E80E00C49174 /* Release */,
+				3B9C2A702E4CCEB900DCB472 /* Debug */,
+				3B9C2A712E4CCEB900DCB472 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 3B074A122E40E80E00C49174 /* Project object */;
+	rootObject = 3B9C2A5D2E4CCEB900DCB472 /* Project object */;
 }

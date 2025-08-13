@@ -6,64 +6,69 @@
 //
 
 import SwiftUI
+import PhotosUI
+import CoreModels
+import CoreStorage
+import CoreServices
 
 final class ProfileViewModel: ObservableObject {
-    @Published var user: UserModel = .init(
-        name: "Asiya",
-        email: "a@gmail.com",
-        avatarURL: URL(string: "https://images.unsplash.com/photo-1544005313-94ddf0286df2"),
-        telephoneNumber: "+998999999999"
-    )
-    
+    @Published var user: UserModel
+    @Published var avatarData: Data?
+    @Published var showPicker = false
+    @Published var pickedItem: PhotosPickerItem?
+
+    private let userService = UserService.shared
+
+    init() {
+        user = userService.currentUser ?? UserModel(
+            name: "",
+            email: "",
+            telephoneNumber: ""
+        )
+        avatarData = userService.avatarData
+    }
+
     var sections: [ProfileSectionModel] {
         [
             ProfileSectionModel(
                 header: "Account settings",
                 rows: [
-                    ProfileRowModel(
-                        icon: "person.crop.circle",
-                        title: "Edit Profile",
-                        destination: .editProfile
-                    ),
-                    ProfileRowModel(
-                        icon: "creditcard",
-                        title: "Payment Methods",
-                        destination: .paymentMethods
-                    ),
-                    ProfileRowModel(
-                        icon: "bell.badge",
-                        title: "Notifiactions",
-                        destination: .notifications
-                    ),
-                    ProfileRowModel(
-                        icon: "clock.arrow.circlepath",
-                        title: "Ride History",
-                        destination: .rideHistory
-                    )
+                    .init(icon: "person.crop.circle", title: "Edit Profile", destination: .editProfile),
+                    .init(icon: "creditcard", title: "Payment Methods", destination: .paymentMethods),
+                    .init(icon: "bell.badge", title: "Notifications", destination: .notifications),
+                    .init(icon: "clock.arrow.circlepath", title: "Ride History", destination: .rideHistory)
                 ]
             ),
             ProfileSectionModel(
                 header: "Support",
                 rows: [
-                    ProfileRowModel(
-                        icon: "questionmark.circle",
-                        title: "Help & Support",
-                        destination: .support
-                    )
+                    .init(icon: "questionmark.circle", title: "Help & Support", destination: .support)
                 ]
             ),
             ProfileSectionModel(
                 header: nil,
                 rows: [
-                    ProfileRowModel(
-                        icon: "rectangle.portrait.and.arrow.right",
-                        title: "Sign Out",
-                        tint: .red,
-                        destination: .logout,
-                        role: .destructive
-                    )
+                    .init(icon: "rectangle.portrait.and.arrow.right",
+                          title: "Sign Out",
+                          tint: .red,
+                          destination: .logout,
+                          role: .destructive)
                 ]
             )
         ]
+    }
+
+    @MainActor
+    func handlePickedItem() async {
+        guard let pickedItem else { return }
+        guard let data = try? await pickedItem.loadTransferable(type: Data.self) else { return }
+
+        avatarData = data
+        userService.updateAvatarData(data)
+        self.pickedItem = nil
+    }
+
+    func onAvatarTap() {
+        showPicker = true
     }
 }

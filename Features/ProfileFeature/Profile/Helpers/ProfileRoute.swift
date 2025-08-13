@@ -15,5 +15,3 @@ enum ProfileRoute: Hashable {
     case support
     case logout
 }
-
-

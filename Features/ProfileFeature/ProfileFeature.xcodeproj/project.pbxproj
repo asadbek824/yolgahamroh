@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B9C2A962E4CCFEF00DCB472 /* CoreStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B9C2A952E4CCFEF00DCB472 /* CoreStorage.framework */; };
+		3B9C2ABB2E4CD05E00DCB472 /* CoreModels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B9C2ABA2E4CD05E00DCB472 /* CoreModels.framework */; };
+		3B9C2ACA2E4CD58300DCB472 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B9C2AC92E4CD58300DCB472 /* CoreServices.framework */; };
 		476D15822E4B4E130023F067 /* Profile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 476D157A2E4B4E130023F067 /* Profile.framework */; };
 		476D15832E4B4E130023F067 /* Profile.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 476D157A2E4B4E130023F067 /* Profile.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		476D158A2E4B4E5F0023F067 /* DesignSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 476D15892E4B4E5F0023F067 /* DesignSystem.framework */; };
@@ -39,6 +42,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3B9C2A952E4CCFEF00DCB472 /* CoreStorage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreStorage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B9C2ABA2E4CD05E00DCB472 /* CoreModels.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreModels.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B9C2AC92E4CD58300DCB472 /* CoreServices.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreServices.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		476D15612E4B4DD50023F067 /* ProfileFeature.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProfileFeature.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		476D157A2E4B4E130023F067 /* Profile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Profile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		476D15892E4B4E5F0023F067 /* DesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,8 +79,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				476D158E2E4B4E9F0023F067 /* CoreExtentions.framework in Frameworks */,
+				3B9C2ACA2E4CD58300DCB472 /* CoreServices.framework in Frameworks */,
 				476D15922E4B4EAB0023F067 /* CoreUIElements.framework in Frameworks */,
 				476D158A2E4B4E5F0023F067 /* DesignSystem.framework in Frameworks */,
+				3B9C2ABB2E4CD05E00DCB472 /* CoreModels.framework in Frameworks */,
+				3B9C2A962E4CCFEF00DCB472 /* CoreStorage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +112,9 @@
 		476D15882E4B4E5F0023F067 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3B9C2AC92E4CD58300DCB472 /* CoreServices.framework */,
+				3B9C2ABA2E4CD05E00DCB472 /* CoreModels.framework */,
+				3B9C2A952E4CCFEF00DCB472 /* CoreStorage.framework */,
 				476D15912E4B4EAB0023F067 /* CoreUIElements.framework */,
 				476D158D2E4B4E9F0023F067 /* CoreExtentions.framework */,
 				476D15892E4B4E5F0023F067 /* DesignSystem.framework */,
@@ -387,7 +399,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -420,7 +432,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -452,7 +464,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -492,7 +504,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

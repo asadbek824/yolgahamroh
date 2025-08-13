@@ -8,37 +8,28 @@
 import SwiftUI
 
 struct AvatarView: View {
-    let url: URL?
-    
+    let data: Data?
+    var onTap: () -> Void
+
     var body: some View {
         Group {
-            if let url {
-                AsyncImage(url: url, transaction: .init(animation: .easeInOut)) { phase in
-                    switch phase {
-                    case .empty:
-                        ProgressView().progressViewStyle(.circular)
-                    case .success(let image):
-                        image.resizable().scaledToFill()
-                    default:
-                        placeholder
-                    }
-                }
+            if let data,
+               let uiImage = UIImage(data: data) {
+                Image(uiImage: uiImage)
+                    .resizable()
+                    .scaledToFill()
             } else {
-                placeholder
+                ZStack {
+                    Circle().fill(.ultraThinMaterial)
+                    Image(systemName: "person.fill")
+                        .font(.system(size: 36))
+                        .foregroundStyle(.secondary)
+                }
             }
         }
         .clipShape(Circle())
-        .overlay(Circle().strokeBorder(.quaternary, lineWidth: 1))
         .shadow(color: .black.opacity(0.08), radius: 6, x: 0, y: 4)
-        .accessibilityHidden(true)
-    }
-    
-    private var placeholder: some View {
-        ZStack {
-            Circle().fill(.ultraThinMaterial)
-            Image(systemName: "person.fill")
-                .font(.system(size: 36))
-                .foregroundStyle(.secondary)
-        }
+        .contentShape(Circle())
+        .onTapGesture { onTap() }
     }
 }

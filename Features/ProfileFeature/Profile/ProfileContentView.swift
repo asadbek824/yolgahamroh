@@ -10,7 +10,6 @@ import CoreUIElements
 
 public struct ProfileContentView: View {
     @StateObject private var viewModel = ProfileViewModel()
-    @State private var path: [ProfileRoute] = []
     
     public init() {}
     
@@ -24,14 +23,17 @@ extension ProfileContentView {
         NavigationView {
             List {
                 Section {
-                    ProfileHeaderView(user: viewModel.user)
-                        .listRowBackground(Color.clear)
+                    ProfileHeaderView(
+                        user: viewModel.user,
+                        avatarData: viewModel.avatarData,
+                        onAvatarTap: { viewModel.onAvatarTap() }
+                    )
+                    .listRowBackground(Color.clear)
                 }
                 ForEach(viewModel.sections) { section in
                     Section {
                         ForEach(section.rows) { row in
-                            ProfileRow(model: row) {
-                            }
+                            ProfileRow(model: row) { }
                         }
                     } header: {
                         if let title = section.header {
@@ -43,38 +45,14 @@ extension ProfileContentView {
             .listStyle(.insetGrouped)
             .navigationTitle("Profile")
             .navigationBarTitleDisplayMode(.inline)
-            .background(backgroundImage)
         }
-    }
-    
-    private var backgroundImage: some View {
-        GeometryReader { geometry in
-            ZStack {
-                Image("uzbek_background")
-                    .resizable()
-                    .scaledToFill()
-                    .ignoresSafeArea()
-                    .overlay(Color.white.opacity(0.9))
-                
-                LinearGradient(
-                    gradient: Gradient(colors: [
-                        Color.black.opacity(0.5),
-                        Color.clear
-                    ]),
-                    startPoint: .top,
-                    endPoint: .center
-                )
-                
-                LinearGradient(
-                    gradient: Gradient(colors: [
-                        Color.clear,
-                        Color.black.opacity(0.4)
-                    ]),
-                    startPoint: .center,
-                    endPoint: .bottom
-                )
-            }
-            .ignoresSafeArea()
+        .photosPicker(
+            isPresented: $viewModel.showPicker,
+            selection: $viewModel.pickedItem,
+            matching: .images
+        )
+        .onChange(of: viewModel.pickedItem) { _ in
+            Task { await viewModel.handlePickedItem() }
         }
     }
 }

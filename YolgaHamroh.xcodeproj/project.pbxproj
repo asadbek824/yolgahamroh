@@ -15,6 +15,12 @@
 		3B0749E72E40D75B00C49174 /* AppNavigation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3B0749E52E40D74C00C49174 /* AppNavigation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3B074A532E40EAD600C49174 /* DesignSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B074A522E40EA6C00C49174 /* DesignSystem.framework */; };
 		3B074A542E40EAD600C49174 /* DesignSystem.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3B074A522E40EA6C00C49174 /* DesignSystem.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3B9C2A782E4CCF2000DCB472 /* CoreStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B9C2A772E4CCEBA00DCB472 /* CoreStorage.framework */; };
+		3B9C2A792E4CCF2000DCB472 /* CoreStorage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3B9C2A772E4CCEBA00DCB472 /* CoreStorage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3B9C2AB82E4CD05600DCB472 /* CoreModels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B9C2AB42E4CD03E00DCB472 /* CoreModels.framework */; };
+		3B9C2AB92E4CD05600DCB472 /* CoreModels.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3B9C2AB42E4CD03E00DCB472 /* CoreModels.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3B9C2ACD2E4CD58E00DCB472 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B9C2A2E2E4CC36100DCB472 /* CoreServices.framework */; };
+		3B9C2ACE2E4CD58E00DCB472 /* CoreServices.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3B9C2A2E2E4CC36100DCB472 /* CoreServices.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +52,27 @@
 			remoteGlobalIDString = 3B074A412E40EA6B00C49174;
 			remoteInfo = DesignSystem;
 		};
+		3B9C2A2D2E4CC36100DCB472 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B074A272E40E80E00C49174 /* CoreServices.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3B074A1B2E40E80E00C49174;
+			remoteInfo = CoreServices;
+		};
+		3B9C2A762E4CCEBA00DCB472 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B9C2A722E4CCEB900DCB472 /* CoreStorage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3B9C2A662E4CCEB900DCB472;
+			remoteInfo = CoreStorage;
+		};
+		3B9C2AB32E4CD03E00DCB472 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B9C2AAF2E4CD03E00DCB472 /* CoreModels.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3B9C2AA32E4CD03D00DCB472;
+			remoteInfo = CoreModels;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -56,8 +83,11 @@
 			dstSubfolderSpec = 10;
 			files = (
 				3B0749E72E40D75B00C49174 /* AppNavigation.framework in Embed Frameworks */,
+				3B9C2AB92E4CD05600DCB472 /* CoreModels.framework in Embed Frameworks */,
 				3B074A542E40EAD600C49174 /* DesignSystem.framework in Embed Frameworks */,
+				3B9C2A792E4CCF2000DCB472 /* CoreStorage.framework in Embed Frameworks */,
 				3B0742C32E40BCD400C49174 /* CoreExtentions.framework in Embed Frameworks */,
+				3B9C2ACE2E4CD58E00DCB472 /* CoreServices.framework in Embed Frameworks */,
 				3B0439532E40BA04002BB867 /* CoreUIElements.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -71,6 +101,8 @@
 		3B0749E02E40D74C00C49174 /* AppNavigation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AppNavigation.xcodeproj; path = AppNavigation/AppNavigation.xcodeproj; sourceTree = "<group>"; };
 		3B074A272E40E80E00C49174 /* CoreServices.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CoreServices.xcodeproj; path = CoreServices/CoreServices.xcodeproj; sourceTree = "<group>"; };
 		3B074A4D2E40EA6B00C49174 /* DesignSystem.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DesignSystem.xcodeproj; path = DesignSystem/DesignSystem.xcodeproj; sourceTree = "<group>"; };
+		3B9C2A722E4CCEB900DCB472 /* CoreStorage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CoreStorage.xcodeproj; path = CoreStorage/CoreStorage.xcodeproj; sourceTree = "<group>"; };
+		3B9C2AAF2E4CD03E00DCB472 /* CoreModels.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CoreModels.xcodeproj; path = CoreModels/CoreModels.xcodeproj; sourceTree = "<group>"; };
 		3B9D78A82E3CBFAF00E5C72B /* YolgaHamroh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YolgaHamroh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B9D78D02E3CC82D00E5C72B /* HomeFeature.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = HomeFeature.xcodeproj; path = HomeFeature/HomeFeature.xcodeproj; sourceTree = "<group>"; };
 		476D156F2E4B4DD70023F067 /* ProfileFeature.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ProfileFeature.xcodeproj; path = ProfileFeature/ProfileFeature.xcodeproj; sourceTree = "<group>"; };
@@ -90,8 +122,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B0749E62E40D75B00C49174 /* AppNavigation.framework in Frameworks */,
+				3B9C2AB82E4CD05600DCB472 /* CoreModels.framework in Frameworks */,
 				3B074A532E40EAD600C49174 /* DesignSystem.framework in Frameworks */,
+				3B9C2A782E4CCF2000DCB472 /* CoreStorage.framework in Frameworks */,
 				3B0742C22E40BCD400C49174 /* CoreExtentions.framework in Frameworks */,
+				3B9C2ACD2E4CD58E00DCB472 /* CoreServices.framework in Frameworks */,
 				3B0439522E40BA04002BB867 /* CoreUIElements.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -126,6 +161,7 @@
 		3B074A282E40E80E00C49174 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				3B9C2A2E2E4CC36100DCB472 /* CoreServices.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -134,6 +170,22 @@
 			isa = PBXGroup;
 			children = (
 				3B074A522E40EA6C00C49174 /* DesignSystem.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3B9C2A732E4CCEB900DCB472 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3B9C2A772E4CCEBA00DCB472 /* CoreStorage.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3B9C2AB02E4CD03E00DCB472 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3B9C2AB42E4CD03E00DCB472 /* CoreModels.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -183,6 +235,8 @@
 		3B9D83732E40B7EA00E5C72B /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				3B9C2AAF2E4CD03E00DCB472 /* CoreModels.xcodeproj */,
+				3B9C2A722E4CCEB900DCB472 /* CoreStorage.xcodeproj */,
 				3B074A4D2E40EA6B00C49174 /* DesignSystem.xcodeproj */,
 				3B074A272E40E80E00C49174 /* CoreServices.xcodeproj */,
 				3B0749E02E40D74C00C49174 /* AppNavigation.xcodeproj */,
@@ -262,8 +316,16 @@
 					ProjectRef = 3B0742B92E40BC5D00C49174 /* CoreExtentions.xcodeproj */;
 				},
 				{
+					ProductGroup = 3B9C2AB02E4CD03E00DCB472 /* Products */;
+					ProjectRef = 3B9C2AAF2E4CD03E00DCB472 /* CoreModels.xcodeproj */;
+				},
+				{
 					ProductGroup = 3B074A282E40E80E00C49174 /* Products */;
 					ProjectRef = 3B074A272E40E80E00C49174 /* CoreServices.xcodeproj */;
+				},
+				{
+					ProductGroup = 3B9C2A732E4CCEB900DCB472 /* Products */;
+					ProjectRef = 3B9C2A722E4CCEB900DCB472 /* CoreStorage.xcodeproj */;
 				},
 				{
 					ProductGroup = 3B04394A2E40B9C3002BB867 /* Products */;
@@ -316,6 +378,27 @@
 			fileType = wrapper.framework;
 			path = DesignSystem.framework;
 			remoteRef = 3B074A512E40EA6C00C49174 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3B9C2A2E2E4CC36100DCB472 /* CoreServices.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CoreServices.framework;
+			remoteRef = 3B9C2A2D2E4CC36100DCB472 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3B9C2A772E4CCEBA00DCB472 /* CoreStorage.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CoreStorage.framework;
+			remoteRef = 3B9C2A762E4CCEBA00DCB472 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3B9C2AB42E4CD03E00DCB472 /* CoreModels.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CoreModels.framework;
+			remoteRef = 3B9C2AB32E4CD03E00DCB472 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -475,7 +558,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -508,7 +591,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
