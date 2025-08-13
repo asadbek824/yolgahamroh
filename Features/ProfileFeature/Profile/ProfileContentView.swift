@@ -9,97 +9,75 @@ import SwiftUI
 import CoreUIElements
 
 public struct ProfileContentView: View {
+    @StateObject private var viewModel = ProfileViewModel()
+    @State private var path: [ProfileRoute] = []
     
     public init() {}
     
     public var body: some View {
-        NavigationView() {
-            ScrollView {
-                VStack {
-                    ProfileAvatar()
-                    VStack(spacing: 12) {
-                        CustomRow(icon: "car", text: "Мои поездки")
-                        CustomRow(icon: "creditcard", text: "Способы оплаты")
-                        CustomRow(icon: "gearshape", text: "Настройки")
+        contentView
+    }
+}
+
+extension ProfileContentView {
+    private var contentView: some View {
+        NavigationView {
+            List {
+                Section {
+                    ProfileHeaderView(user: viewModel.user)
+                        .listRowBackground(Color.clear)
+                }
+                ForEach(viewModel.sections) { section in
+                    Section {
+                        ForEach(section.rows) { row in
+                            ProfileRow(model: row) {
+                            }
+                        }
+                    } header: {
+                        if let title = section.header {
+                            Text(title).textCase(nil)
+                        }
                     }
-                    .navigationTitle("Profile")
-                    .navigationBarTitleDisplayMode(.inline)
                 }
             }
-        }
-        
-        
-    }
-}
-
-struct ProfileAvatar: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "person.fill")
-                .resizable()
-                .frame(width: 100, height: 100)
-                .clipShape(Circle())
-                .overlay(
-                    Circle()
-                        .stroke(Color.gray.opacity(0.4), lineWidth: 2)
-                )
-                .shadow(radius: 4)
-                .padding(.top, 20)
-            
-            VStack(spacing: -10) {
-                Text("Name")
-                    .font(.title2)
-                    .fontWeight(.semibold)
-                    .padding(.bottom, 10)
-                
-                Text("example@mail")
-                    .font(.title2)
-                    .fontWeight(.light)
-                    .foregroundStyle(.black)
-                
-            }
-            
+            .listStyle(.insetGrouped)
+            .navigationTitle("Profile")
+            .navigationBarTitleDisplayMode(.inline)
+            .background(backgroundImage)
         }
     }
-}
-
-struct CustomRow: View {
-    var icon: String
-    var text: String
-    var showDivider: Bool = true
     
-    var body: some View {
-        
-        HStack {
-            Image(systemName: icon)
-                .frame(width: 24, height: 24)
-                .foregroundColor(.black)
-                .scaledToFill()
-                .padding(.leading, 10)
-            
-            Text(text)
-                .foregroundColor(.primary)
-                .fontWeight(.semibold)
-            
-            Spacer()
-            
-            Image(systemName: "chevron.right")
-                .foregroundColor(.gray)
-                .padding(.leading, -30)
-        }
-        .contentShape(Rectangle())
-        .padding(.vertical, 10)
-        
-        if showDivider {
-            Rectangle()
-                .fill(Color.black.opacity(0.2))
-                .frame(height: 1)
-                .padding(.leading, 10)
-                .padding(.trailing, 10)
+    private var backgroundImage: some View {
+        GeometryReader { geometry in
+            ZStack {
+                Image("uzbek_background")
+                    .resizable()
+                    .scaledToFill()
+                    .ignoresSafeArea()
+                    .overlay(Color.white.opacity(0.9))
+                
+                LinearGradient(
+                    gradient: Gradient(colors: [
+                        Color.black.opacity(0.5),
+                        Color.clear
+                    ]),
+                    startPoint: .top,
+                    endPoint: .center
+                )
+                
+                LinearGradient(
+                    gradient: Gradient(colors: [
+                        Color.clear,
+                        Color.black.opacity(0.4)
+                    ]),
+                    startPoint: .center,
+                    endPoint: .bottom
+                )
+            }
+            .ignoresSafeArea()
         }
     }
 }
-
 
 #Preview {
     ProfileContentView()
