@@ -6,12 +6,13 @@
 //
 
 import Foundation
+import CoreServices
 
 public extension DesignSystemProvider {
     enum DesignSystemsStrings {
-        public static func localized(_ key: String) -> String {
+        public static func localized(_ key: String, table: String? = nil) -> String {
             let bundle = Bundle.designSystem
-            return NSLocalizedString(key, bundle: bundle, comment: "")
+            return LanguageManager.shared.localized(key, from: bundle, table: table)
         }
         public static var homeTitle: String { localized("home_title") }
         public static var driverTitle: String { localized("driver_title") }

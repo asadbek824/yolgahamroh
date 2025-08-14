@@ -2,37 +2,40 @@
 //  LanguageService.swift
 //  CoreServices
 //
-//  Created by Yo'ldoshev Asadbek on 04/08/2025.
+//  Created by Yo'ldoshev Asadbek on 14/08/2025.
 //
 
+import CoreStorage
+import CoreModels
+import Combine
 import Foundation
 
-public final class LanguageService {
+public final class LanguageManager: ObservableObject {
+    public static let shared = LanguageManager()
+    @Published public private(set) var language: AppLanguage = .en
 
-    public static let shared = LanguageService()
+    private init() {}
 
-    private let userDefaults: UserDefaultsServiceProtocol
-    private let languageKey = "selectedAppLanguage"
-
-    public init(userDefaults: UserDefaultsServiceProtocol = UserDefaultsService.shared) {
-        self.userDefaults = userDefaults
-    }
-
-    public var currentLanguage: AppLanguage {
-        if let stored = userDefaults.getString(forKey: languageKey),
-           let lang = AppLanguage(rawValue: stored) {
-            return lang
+    public func bootstrap() {
+        if !AppLanguageStorage.exists() {
+            AppLanguageStorage.current = .systemDefault()
         }
-
-        let systemLangCode = Locale.preferredLanguages.first?.prefix(2) ?? "uz"
-        return AppLanguage(rawValue: String(systemLangCode)) ?? .ru
+        language = AppLanguageStorage.current
     }
 
-    public func setLanguage(_ language: AppLanguage) {
-        userDefaults.setString(language.rawValue, forKey: languageKey)
+    public func set(_ lang: AppLanguage) {
+        guard lang != language else { return }
+        AppLanguageStorage.current = lang
+        language = lang
     }
 
-    public func resetToSystemLanguage() {
-        userDefaults.removeValue(forKey: languageKey)
+    public func localized(_ key: String, from bundle: Bundle, table: String? = nil) -> String {
+        guard
+            let path = bundle.path(forResource: language.localeIdentifier, ofType: "lproj"),
+            let langBundle = Bundle(path: path)
+        else {
+            return NSLocalizedString(key, tableName: table, bundle: bundle, comment: "")
+        }
+        return NSLocalizedString(key, tableName: table, bundle: langBundle, comment: "")
     }
 }

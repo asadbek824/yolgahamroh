@@ -6,8 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		3B8094CE2E4E25FA00432CF3 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8094CD2E4E25FA00432CF3 /* CoreServices.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		3B074A412E40EA6B00C49174 /* DesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B8094CD2E4E25FA00432CF3 /* CoreServices.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreServices.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -23,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B8094CE2E4E25FA00432CF3 /* CoreServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -33,6 +39,7 @@
 			isa = PBXGroup;
 			children = (
 				3B074A432E40EA6B00C49174 /* DesignSystem */,
+				3B8094CC2E4E25FA00432CF3 /* Frameworks */,
 				3B074A422E40EA6B00C49174 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +50,14 @@
 				3B074A412E40EA6B00C49174 /* DesignSystem.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		3B8094CC2E4E25FA00432CF3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3B8094CD2E4E25FA00432CF3 /* CoreServices.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
