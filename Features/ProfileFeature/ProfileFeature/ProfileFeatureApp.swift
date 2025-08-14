@@ -12,7 +12,7 @@ import Profile
 struct ProfileFeatureApp: App {
     var body: some Scene {
         WindowGroup {
-            ProfileContentView()
+            ProfileAssembly().assemble()
         }
     }
 }

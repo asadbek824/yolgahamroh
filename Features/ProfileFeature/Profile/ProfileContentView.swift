@@ -9,9 +9,7 @@ import SwiftUI
 import CoreUIElements
 
 public struct ProfileContentView: View {
-    @StateObject private var viewModel = ProfileViewModel()
-    
-    public init() {}
+    @ObservedObject var viewModel: ProfileViewModel
     
     public var body: some View {
         contentView
@@ -43,7 +41,7 @@ extension ProfileContentView {
                 }
             }
             .listStyle(.insetGrouped)
-            .navigationTitle("Profile")
+            .navigationTitle(viewModel.navTitle())
             .navigationBarTitleDisplayMode(.inline)
         }
         .photosPicker(
@@ -55,8 +53,4 @@ extension ProfileContentView {
             Task { await viewModel.handlePickedItem() }
         }
     }
-}
-
-#Preview {
-    ProfileContentView()
 }
