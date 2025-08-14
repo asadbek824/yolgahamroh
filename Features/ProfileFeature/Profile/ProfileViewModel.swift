@@ -16,15 +16,16 @@ final class ProfileViewModel: ObservableObject {
     @Published var user: UserModel
     @Published var path: [ProfileRoute] = []
     @Published var avatarData: Data?
-    @Published var showPicker = false
     @Published var pickedItem: PhotosPickerItem?
 
+    @Published var showPicker = false
     @Published var showPermissionAlert = false
     @Published var showLogoutAlert = false 
 
+    let localizationService: ProfileLocalizationServiceProtocol
+    
     private let userService = UserService.shared
     private let sectionsService: ProfileSectionsServiceProtocol
-    private let localizationService: ProfileLocalizationServiceProtocol
     private let photoPermission: PhotoPermissionChecking
 
     init(
@@ -46,10 +47,6 @@ final class ProfileViewModel: ObservableObject {
 
     var sections: [ProfileSectionModel] {
         sectionsService.sections(for: user)
-    }
-
-    func navTitle() -> String {
-        localizationService.navTitle
     }
 
     func onAvatarTap() {

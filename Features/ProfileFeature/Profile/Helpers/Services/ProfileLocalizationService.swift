@@ -17,6 +17,12 @@ protocol ProfileLocalizationServiceProtocol {
     var support: String { get }
     var supAndHelp: String { get }
     var singOut: String { get }
+    var cancelButton: String { get }
+    var photoPermissionTitle: String { get }
+    var photoPermissionMessage: String { get }
+    var openSettingsButton: String { get }
+    var logoutTitle: String { get }
+    var logoutMessage: String { get }
 }
 
 final class ProfileLocalizationService: ProfileLocalizationServiceProtocol {
@@ -31,4 +37,10 @@ final class ProfileLocalizationService: ProfileLocalizationServiceProtocol {
     var support: String { locale.helpTitle }
     var supAndHelp: String { locale.helpTitle } // Change
     var singOut: String {locale.logoutButton }
+    var cancelButton: String { locale.cancelButton }
+    var photoPermissionTitle: String { locale.photoPermissionTitle }
+    var photoPermissionMessage: String { locale.photoPermissionMessage }
+    var openSettingsButton: String { locale.openSettingsButton }
+    var logoutTitle: String { locale.logoutTitle }
+    var logoutMessage: String { locale.logoutMessage }
 }

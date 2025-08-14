@@ -44,33 +44,33 @@ extension ProfileContentView {
                 }
             }
             .listStyle(.insetGrouped)
-            .navigationTitle(viewModel.navTitle())
+            .navigationTitle(viewModel.localizationService.navTitle)
             .navigationBarTitleDisplayMode(.inline)
             .navigationDestination(for: ProfileRoute.self) { route in
                 switch route {
                 case .editProfile:
                     EditProfileView()
-                        .navigationTitle("Edit Profile")
+                        .navigationTitle(viewModel.localizationService.editProfile)
                         .navigationBarTitleDisplayMode(.inline)
 
                 case .paymentMethods:
                     PaymentMethodsView()
-                        .navigationTitle("Payment methods")
+                        .navigationTitle(viewModel.localizationService.paymentMethods)
                         .navigationBarTitleDisplayMode(.inline)
 
                 case .notifications:
                     NotificationsSettingsView()
-                        .navigationTitle("Notifications")
+                        .navigationTitle(viewModel.localizationService.notifications)
                         .navigationBarTitleDisplayMode(.inline)
 
                 case .rideHistory:
                     TripsListView()
-                        .navigationTitle("My Trips")
+                        .navigationTitle(viewModel.localizationService.rideHistory)
                         .navigationBarTitleDisplayMode(.inline)
 
                 case .support:
                     HelpView()
-                        .navigationTitle("Help")
+                        .navigationTitle(viewModel.localizationService.support)
                         .navigationBarTitleDisplayMode(.inline)
 
                 case .logout:
@@ -87,20 +87,26 @@ extension ProfileContentView {
             Task { await viewModel.handlePickedItem() }
         }
         .baseAlert(
-            "Доступ к фото отключён",
+            viewModel.localizationService.photoPermissionTitle,
             isPresented: $viewModel.showPermissionAlert,
             style: .warning,
-            message: "Разрешите доступ к Фото, чтобы выбрать аватар.",
-            primary: .init("Открыть настройки", kind: .primary) { viewModel.openSystemSettings() },
-            secondary: .init("Отмена", kind: .secondary) { }
+            message: viewModel.localizationService.photoPermissionMessage,
+            primary: .init(
+                viewModel.localizationService.openSettingsButton,
+                kind: .primary
+            ) { viewModel.openSystemSettings() },
+            secondary: .init(
+                viewModel.localizationService.cancelButton,
+                kind: .secondary
+            ) { }
         )
         .baseAlert(
-            "Выйти из аккаунта?",
+            viewModel.localizationService.logoutTitle,
             isPresented: $viewModel.showLogoutAlert,
             style: .warning,
-            message: "Вы сможете войти снова в любой момент.",
-            primary: .init("Выйти", kind: .destructive) { },
-            secondary: .init("Отмена", kind: .secondary) { }
+            message: viewModel.localizationService.logoutMessage,
+            primary: .init(viewModel.localizationService.singOut, kind: .destructive) { },
+            secondary: .init(viewModel.localizationService.cancelButton, kind: .secondary) { }
         )
     }
 }
