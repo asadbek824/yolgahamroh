@@ -61,7 +61,6 @@ public extension DesignSystemProvider {
         public static var smokingAllowed: String { localized("smoking_allowed") }
         public static var paymentMethod: String { localized("payment_method") }
         public static var cashPayment: String { localized("cash_payment") }
-        public static var cardPayment: String { localized("card_payment") }
         public static var seatsTaken: String { localized("seats_taken") }
         public static var availableSeats: String { localized("available_seats") }
         public static var filterTitle: String { localized("filter_title") }
@@ -116,6 +115,11 @@ public extension DesignSystemProvider {
         public static var tripUpdated: String { localized("trip_updated") }
         public static var tripDeleted: String { localized("trip_deleted") }
         public static var editProfile: String { localized("edit_profile") }
+        public static var photoPermissionTitle: String { localized("photo_permission_title") }
+        public static var photoPermissionMessage: String { localized("photo_permission_message") }
+        public static var openSettingsButton: String { localized("open_settings_button") }
+        public static var logoutTitle: String { localized("logout_title") }
+        public static var logoutMessage: String { localized("logout_message") }
     }
 }
 

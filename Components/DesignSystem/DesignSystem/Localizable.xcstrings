@@ -1013,6 +1013,52 @@
         }
       }
     },
+    "logout_message" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You can log in again at any time."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вы сможете войти снова в любой момент."
+          }
+        },
+        "uz" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Istalgan vaqtda qayta kirishingiz mumkin."
+          }
+        }
+      }
+    },
+    "logout_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Log out of account?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выйти из аккаунта?"
+          }
+        },
+        "uz" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hisobdan chiqmoqchimisiz?"
+          }
+        }
+      }
+    },
     "luggage_allowed" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1197,6 +1243,29 @@
         }
       }
     },
+    "open_settings_button" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open settings"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Открыть настройки"
+          }
+        },
+        "uz" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sozlamalarni ochish"
+          }
+        }
+      }
+    },
     "passengers_label" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -1331,6 +1400,52 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hayvonlarga ruxsat etilgan"
+          }
+        }
+      }
+    },
+    "photo_permission_message" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Allow access to Photos to choose an avatar."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Разрешите доступ к Фото, чтобы выбрать аватар."
+          }
+        },
+        "uz" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Avatar tanlash uchun Fotosuratlarga ruxsat bering."
+          }
+        }
+      }
+    },
+    "photo_permission_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Photo access disabled"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Доступ к фото отключён"
+          }
+        },
+        "uz" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Foto ruxsati o‘chirilgan"
           }
         }
       }
