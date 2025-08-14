@@ -11,23 +11,29 @@ import CoreModels
 import CoreStorage
 import CoreServices
 
+@MainActor
 final class ProfileViewModel: ObservableObject {
     @Published var user: UserModel
     @Published var avatarData: Data?
     @Published var showPicker = false
     @Published var pickedItem: PhotosPickerItem?
 
+    @Published var showPermissionAlert = false
+
     private let userService = UserService.shared
     private let sectionsService: ProfileSectionsServiceProtocol
     private let localizationService: ProfileLocalizationServiceProtocol
-    
-     init(
+    private let photoPermission: PhotoPermissionChecking
+
+    init(
         localizationService: ProfileLocalizationServiceProtocol,
-        sectionsService: ProfileSectionsServiceProtocol
+        sectionsService: ProfileSectionsServiceProtocol,
+        photoPermission: PhotoPermissionChecking = PhotoPermissionService()
     ) {
         self.localizationService = localizationService
         self.sectionsService = sectionsService
-        
+        self.photoPermission = photoPermission
+
         user = userService.currentUser ?? UserModel(
             name: "",
             email: "",
@@ -40,21 +46,43 @@ final class ProfileViewModel: ObservableObject {
         sectionsService.sections(for: user)
     }
 
-    @MainActor
-    func handlePickedItem() async {
-        guard let pickedItem else { return }
-        guard let data = try? await pickedItem.loadTransferable(type: Data.self) else { return }
-
-        avatarData = data
-        userService.updateAvatarData(data)
-        self.pickedItem = nil
+    func navTitle() -> String {
+        localizationService.navTitle
     }
 
     func onAvatarTap() {
-        showPicker = true
+        switch photoPermission.status() {
+        case .authorized:
+            showPicker = true
+        case .notDetermined:
+            Task {
+                let st = await photoPermission.request()
+                if st == .authorized {
+                    showPicker = true
+                } else {
+                    showPermissionAlert = true
+                }
+            }
+        case .denied:
+            showPermissionAlert = true
+        @unknown default:
+            showPermissionAlert = true
+        }
     }
-    
-    func navTitle() -> String {
-        localizationService.navTitle
+
+    func handlePickedItem() async {
+        guard let pickedItem else { return }
+        do {
+            if let data = try await pickedItem.loadTransferable(type: Data.self) {
+                avatarData = data
+                userService.updateAvatarData(data)
+            }
+        } catch {  }
+        self.pickedItem = nil
+    }
+
+    func openSystemSettings() {
+        guard let url = URL(string: UIApplication.openSettingsURLString) else { return }
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
 }

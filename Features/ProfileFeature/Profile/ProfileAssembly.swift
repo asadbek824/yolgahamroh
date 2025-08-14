@@ -11,12 +11,14 @@ import SwiftUI
 public struct ProfileAssembly {
     public init() { }
     
+    @MainActor
     public func assemble() -> some View {
-        let profileLocalizationService = ProfileLocalizationService()
-        let profileSectionsService = ProfileSectionsService(localization: profileLocalizationService)
-        let viewModel = ProfileViewModel(localizationService: profileLocalizationService, sectionsService: profileSectionsService)
-        let profileView = ProfileContentView(viewModel: viewModel)
-        return profileView
+        let localization = ProfileLocalizationService()
+        let sections = ProfileSectionsService(localization: localization)
+        let vm = ProfileViewModel(
+            localizationService: localization,
+            sectionsService: sections
+        )
+        return ProfileContentView(viewModel: vm)
     }
-    
 }

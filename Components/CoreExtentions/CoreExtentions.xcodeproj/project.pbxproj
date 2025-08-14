@@ -8,6 +8,7 @@
 
 /* Begin PBXFileReference section */
 		3B0742AD2E40BC5C00C49174 /* CoreExtentions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreExtentions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B8094A92E4DFD7F00432CF3 /* CoreUIElements.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreUIElements.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -33,6 +34,7 @@
 			isa = PBXGroup;
 			children = (
 				3B0742AF2E40BC5C00C49174 /* CoreExtentions */,
+				3B8094A82E4DFD7F00432CF3 /* Frameworks */,
 				3B0742AE2E40BC5C00C49174 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +45,14 @@
 				3B0742AD2E40BC5C00C49174 /* CoreExtentions.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		3B8094A82E4DFD7F00432CF3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3B8094A92E4DFD7F00432CF3 /* CoreUIElements.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

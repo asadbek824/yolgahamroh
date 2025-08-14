@@ -10,7 +10,7 @@ import CoreUIElements
 
 public struct ProfileContentView: View {
     @ObservedObject var viewModel: ProfileViewModel
-    
+
     public var body: some View {
         contentView
     }
@@ -52,5 +52,13 @@ extension ProfileContentView {
         .onChange(of: viewModel.pickedItem) { _ in
             Task { await viewModel.handlePickedItem() }
         }
+        .baseAlert(
+            "Доступ к фото отключён",
+            isPresented: $viewModel.showPermissionAlert,
+            style: .warning,
+            message: "Разрешите доступ к Фото, чтобы выбрать аватар.",
+            primary: .init("Открыть настройки", kind: .primary) { viewModel.openSystemSettings() },
+            secondary: .init("Отмена", kind: .secondary) { }
+        )
     }
 }
