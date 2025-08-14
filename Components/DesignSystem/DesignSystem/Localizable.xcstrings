@@ -576,6 +576,29 @@
         }
       }
     },
+    "edit_profile" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edit Profile"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Редактировать профиль"
+          }
+        },
+        "uz" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Profilni tahrirlash"
+          }
+        }
+      }
+    },
     "edit_trip" : {
       "extractionState" : "manual",
       "localizations" : {

@@ -30,7 +30,7 @@ public struct HomeView: View {
                     .padding()
             }
             .navigationTitle(
-                DesignSystemProvider.DesignSystemsStrings.homeNavTitle
+                DesignSystemProvider.DesignSystemsStrings.homeTitle
             )
             .searchable(
                 text: $searchText,

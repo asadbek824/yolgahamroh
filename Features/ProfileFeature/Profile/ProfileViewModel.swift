@@ -18,8 +18,16 @@ final class ProfileViewModel: ObservableObject {
     @Published var pickedItem: PhotosPickerItem?
 
     private let userService = UserService.shared
-
-    init() {
+    private let sectionsService: ProfileSectionsServiceProtocol
+    private let localizationService: ProfileLocalizationServiceProtocol
+    
+     init(
+        localizationService: ProfileLocalizationServiceProtocol,
+        sectionsService: ProfileSectionsServiceProtocol
+    ) {
+        self.localizationService = localizationService
+        self.sectionsService = sectionsService
+        
         user = userService.currentUser ?? UserModel(
             name: "",
             email: "",
@@ -29,33 +37,7 @@ final class ProfileViewModel: ObservableObject {
     }
 
     var sections: [ProfileSectionModel] {
-        [
-            ProfileSectionModel(
-                header: "Account settings",
-                rows: [
-                    .init(icon: "person.crop.circle", title: "Edit Profile", destination: .editProfile),
-                    .init(icon: "creditcard", title: "Payment Methods", destination: .paymentMethods),
-                    .init(icon: "bell.badge", title: "Notifications", destination: .notifications),
-                    .init(icon: "clock.arrow.circlepath", title: "Ride History", destination: .rideHistory)
-                ]
-            ),
-            ProfileSectionModel(
-                header: "Support",
-                rows: [
-                    .init(icon: "questionmark.circle", title: "Help & Support", destination: .support)
-                ]
-            ),
-            ProfileSectionModel(
-                header: nil,
-                rows: [
-                    .init(icon: "rectangle.portrait.and.arrow.right",
-                          title: "Sign Out",
-                          tint: .red,
-                          destination: .logout,
-                          role: .destructive)
-                ]
-            )
-        ]
+        sectionsService.sections(for: user)
     }
 
     @MainActor
@@ -70,5 +52,9 @@ final class ProfileViewModel: ObservableObject {
 
     func onAvatarTap() {
         showPicker = true
+    }
+    
+    func navTitle() -> String {
+        localizationService.navTitle
     }
 }

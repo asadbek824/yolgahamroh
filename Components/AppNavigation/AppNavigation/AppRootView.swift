@@ -23,19 +23,8 @@ public struct AppRootView: View {
                 }
                 .tag(AppNavigationCoordinator.Tab.home)
 
-            Text("Поездки")
-                .tabItem {
-                    Label("Поездки", systemImage: "car")
-                }
-                .tag(AppNavigationCoordinator.Tab.trips)
 
-            Text(DesignSystemProvider.DesignSystemsStrings.settings)
-                .tabItem {
-                    Label("Избранное", systemImage: "heart")
-                }
-                .tag(AppNavigationCoordinator.Tab.favorites)
-
-            ProfileContentView()
+            ProfileAssembly().assemble()
                 .tabItem {
                     Label("Профиль", systemImage: "person")
                 }

@@ -115,6 +115,7 @@ public extension DesignSystemProvider {
         public static var tripCreated: String { localized("trip_created") }
         public static var tripUpdated: String { localized("trip_updated") }
         public static var tripDeleted: String { localized("trip_deleted") }
+        public static var editProfile: String { localized("edit_profile") }
     }
 }
 
