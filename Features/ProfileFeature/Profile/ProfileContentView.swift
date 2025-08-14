@@ -12,13 +12,13 @@ public struct ProfileContentView: View {
     @ObservedObject var viewModel: ProfileViewModel
 
     public var body: some View {
-        contentView
+        contentView()
     }
 }
 
 extension ProfileContentView {
-    private var contentView: some View {
-        NavigationView {
+    func contentView() -> some View {
+        NavigationStack(path: $viewModel.path) {
             List {
                 Section {
                     ProfileHeaderView(
@@ -28,10 +28,13 @@ extension ProfileContentView {
                     )
                     .listRowBackground(Color.clear)
                 }
+
                 ForEach(viewModel.sections) { section in
                     Section {
                         ForEach(section.rows) { row in
-                            ProfileRow(model: row) { }
+                            ProfileRow(model: row) {
+                                viewModel.handleTap(on: row)
+                            }
                         }
                     } header: {
                         if let title = section.header {
@@ -43,6 +46,37 @@ extension ProfileContentView {
             .listStyle(.insetGrouped)
             .navigationTitle(viewModel.navTitle())
             .navigationBarTitleDisplayMode(.inline)
+            .navigationDestination(for: ProfileRoute.self) { route in
+                switch route {
+                case .editProfile:
+                    EditProfileView()
+                        .navigationTitle("Edit Profile")
+                        .navigationBarTitleDisplayMode(.inline)
+
+                case .paymentMethods:
+                    PaymentMethodsView()
+                        .navigationTitle("Payment methods")
+                        .navigationBarTitleDisplayMode(.inline)
+
+                case .notifications:
+                    NotificationsSettingsView()
+                        .navigationTitle("Notifications")
+                        .navigationBarTitleDisplayMode(.inline)
+
+                case .rideHistory:
+                    TripsListView()
+                        .navigationTitle("My Trips")
+                        .navigationBarTitleDisplayMode(.inline)
+
+                case .support:
+                    HelpView()
+                        .navigationTitle("Help")
+                        .navigationBarTitleDisplayMode(.inline)
+
+                case .logout:
+                    EmptyView()
+                }
+            }
         }
         .photosPicker(
             isPresented: $viewModel.showPicker,
@@ -58,6 +92,14 @@ extension ProfileContentView {
             style: .warning,
             message: "Разрешите доступ к Фото, чтобы выбрать аватар.",
             primary: .init("Открыть настройки", kind: .primary) { viewModel.openSystemSettings() },
+            secondary: .init("Отмена", kind: .secondary) { }
+        )
+        .baseAlert(
+            "Выйти из аккаунта?",
+            isPresented: $viewModel.showLogoutAlert,
+            style: .warning,
+            message: "Вы сможете войти снова в любой момент.",
+            primary: .init("Выйти", kind: .destructive) { },
             secondary: .init("Отмена", kind: .secondary) { }
         )
     }

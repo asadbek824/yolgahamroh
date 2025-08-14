@@ -14,11 +14,13 @@ import CoreServices
 @MainActor
 final class ProfileViewModel: ObservableObject {
     @Published var user: UserModel
+    @Published var path: [ProfileRoute] = []
     @Published var avatarData: Data?
     @Published var showPicker = false
     @Published var pickedItem: PhotosPickerItem?
 
     @Published var showPermissionAlert = false
+    @Published var showLogoutAlert = false 
 
     private let userService = UserService.shared
     private let sectionsService: ProfileSectionsServiceProtocol
@@ -84,5 +86,14 @@ final class ProfileViewModel: ObservableObject {
     func openSystemSettings() {
         guard let url = URL(string: UIApplication.openSettingsURLString) else { return }
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
+    }
+    
+    func handleTap(on row: ProfileRowModel) {
+        guard let destination = row.destination else { return }
+        if destination == .logout {
+            showLogoutAlert = true
+        } else {
+            path.append(destination)
+        }
     }
 }
