@@ -83,10 +83,12 @@ struct RideCardView: View {
                     .resizable()
                     .scaledToFill()
             } else {
-                Image(systemName: "person.crop.circle.fill")
-                    .resizable()
-                    .scaledToFit()
-                    .foregroundColor(.gray.opacity(0.6))
+                ZStack {
+                    Circle().fill(.ultraThinMaterial)
+                    Image(systemName: "person.fill")
+                        .font(.system(size: 36))
+                        .foregroundStyle(.secondary)
+                }
             }
         }
         .frame(width: 56, height: 56)

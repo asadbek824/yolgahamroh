@@ -7,6 +7,7 @@
 
 import SwiftUI
 import PhotosUI
+import Combine
 import CoreModels
 import CoreServices
 
@@ -45,14 +46,17 @@ final class ProfileViewModel: ObservableObject {
     private let loadUser: LoadUserUseCaseProtocol
     private let updateAvatar: UpdateAvatarUseCaseProtocol
     private weak var router: ProfileNavigating?
+    
+    private let userService = UserService.shared
+    private var bag = Set<AnyCancellable>()
 
     init(
-        localization: ProfileLocalizationServiceProtocol,
-        sectionsService: ProfileSectionsServiceProtocol,
-        photoPermission: PhotoPermissionChecking,
-        loadUser: LoadUserUseCaseProtocol,
-        updateAvatar: UpdateAvatarUseCaseProtocol,
-        router: ProfileNavigating
+            localization: ProfileLocalizationServiceProtocol,
+            sectionsService: ProfileSectionsServiceProtocol,
+            photoPermission: PhotoPermissionChecking,
+            loadUser: LoadUserUseCaseProtocol,
+            updateAvatar: UpdateAvatarUseCaseProtocol,
+            router: ProfileNavigating
     ) {
         self.localizationService = localization
         self.sectionsService = sectionsService
@@ -60,9 +64,24 @@ final class ProfileViewModel: ObservableObject {
         self.loadUser = loadUser
         self.updateAvatar = updateAvatar
         self.router = router
-
+        
         let user = loadUser.execute()
-        self.state = State(user: user, avatarData: (UserRepository.shared.avatarData))
+        self.state = State(user: user, avatarData: UserRepository.shared.avatarData)
+        
+        userService.$currentUser
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] newUser in
+                guard let self else { return }
+                self.state.user = newUser ?? self.state.user
+            }
+            .store(in: &bag)
+        
+        userService.$avatarData
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] data in
+                self?.state.avatarData = data
+            }
+            .store(in: &bag)
     }
 
     var sections: [ProfileSectionModel] { sectionsService.sections(for: state.user) }

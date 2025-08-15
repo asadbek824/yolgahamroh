@@ -19,6 +19,10 @@ protocol UserRepositoryProtocol: AnyObject {
     var currentUser: UserModel? { get }
     var avatarData: Data? { get }
     func updateAvatarData(_ data: Data)
+    func updateUser(_ user: UserModel)
+    func updateName(_ name: String)
+    func updateEmail(_ email: String)
+    func updatePhone(_ phone: String)
 }
 
 struct LoadUserUseCase: LoadUserUseCaseProtocol {

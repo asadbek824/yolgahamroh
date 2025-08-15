@@ -18,25 +18,28 @@ public struct HomeView: View {
 
     public var body: some View {
         NavigationView {
-            ScrollView(.vertical, showsIndicators: false) {
-                VStack(spacing: 16) {
-                    rideList
+            ZStack {
+                BackgroundView()
+                ScrollView(.vertical, showsIndicators: false) {
+                    VStack(spacing: 16) {
+                        rideList
+                    }
+                    .padding(.horizontal)
+                    .padding(.top, 8)
                 }
-                .padding(.horizontal)
-                .padding(.top, 8)
+                .safeAreaInset(edge: .bottom) {
+                    bottomBar
+                        .padding()
+                }
+                .navigationTitle(
+                    DesignSystemProvider.DesignSystemsStrings.homeTitle
+                )
+                .searchable(
+                    text: $searchText,
+                    placement: .navigationBarDrawer(displayMode: .always),
+                    prompt: "serach"
+                )
             }
-            .safeAreaInset(edge: .bottom) {
-                bottomBar
-                    .padding()
-            }
-            .navigationTitle(
-                DesignSystemProvider.DesignSystemsStrings.homeTitle
-            )
-            .searchable(
-                text: $searchText,
-                placement: .navigationBarDrawer(displayMode: .always),
-                prompt: "serach"
-            )
             .dismissKeyboardOnTapGesture()
         }
     }

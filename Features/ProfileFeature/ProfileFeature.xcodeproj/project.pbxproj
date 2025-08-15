@@ -26,6 +26,9 @@
 		3B4C15982E4F58D300A05A4B /* TripsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4C15822E4F58D300A05A4B /* TripsListView.swift */; };
 		3B4C15992E4F58D300A05A4B /* Profile.docc in Sources */ = {isa = PBXBuildFile; fileRef = 3B4C15852E4F58D300A05A4B /* Profile.docc */; };
 		3B4C159A2E4F58D300A05A4B /* ProfileAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4C15862E4F58D300A05A4B /* ProfileAssembly.swift */; };
+		3B4C159C2E4F657C00A05A4B /* EditProfileLocalization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4C159B2E4F657C00A05A4B /* EditProfileLocalization.swift */; };
+		3B4C159E2E4F65AF00A05A4B /* UpdateUserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4C159D2E4F65AF00A05A4B /* UpdateUserUseCase.swift */; };
+		3B4C15A02E4F670B00A05A4B /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4C159F2E4F670B00A05A4B /* EditProfileViewModel.swift */; };
 		3B9C2A962E4CCFEF00DCB472 /* CoreStorage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B9C2A952E4CCFEF00DCB472 /* CoreStorage.framework */; };
 		3B9C2ABB2E4CD05E00DCB472 /* CoreModels.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B9C2ABA2E4CD05E00DCB472 /* CoreModels.framework */; };
 		3B9C2ACA2E4CD58300DCB472 /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B9C2AC92E4CD58300DCB472 /* CoreServices.framework */; };
@@ -80,6 +83,9 @@
 		3B4C15822E4F58D300A05A4B /* TripsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsListView.swift; sourceTree = "<group>"; };
 		3B4C15852E4F58D300A05A4B /* Profile.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Profile.docc; sourceTree = "<group>"; };
 		3B4C15862E4F58D300A05A4B /* ProfileAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAssembly.swift; sourceTree = "<group>"; };
+		3B4C159B2E4F657C00A05A4B /* EditProfileLocalization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileLocalization.swift; sourceTree = "<group>"; };
+		3B4C159D2E4F65AF00A05A4B /* UpdateUserUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserUseCase.swift; sourceTree = "<group>"; };
+		3B4C159F2E4F670B00A05A4B /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
 		3B9C2A952E4CCFEF00DCB472 /* CoreStorage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreStorage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B9C2ABA2E4CD05E00DCB472 /* CoreModels.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreModels.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B9C2AC92E4CD58300DCB472 /* CoreServices.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CoreServices.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -198,6 +204,9 @@
 			isa = PBXGroup;
 			children = (
 				3B4C157A2E4F58D300A05A4B /* EditProfileView.swift */,
+				3B4C159B2E4F657C00A05A4B /* EditProfileLocalization.swift */,
+				3B4C159D2E4F65AF00A05A4B /* UpdateUserUseCase.swift */,
+				3B4C159F2E4F670B00A05A4B /* EditProfileViewModel.swift */,
 			);
 			path = EditProfileView;
 			sourceTree = "<group>";
@@ -417,10 +426,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B4C15A02E4F670B00A05A4B /* EditProfileViewModel.swift in Sources */,
 				3B4C15882E4F58D300A05A4B /* UserUseCase.swift in Sources */,
 				3B4C15892E4F58D300A05A4B /* ProfileLocalizationService.swift in Sources */,
 				3B4C158A2E4F58D300A05A4B /* ProfileSectionsService.swift in Sources */,
+				3B4C159E2E4F65AF00A05A4B /* UpdateUserUseCase.swift in Sources */,
 				3B4C158B2E4F58D300A05A4B /* AvatarView.swift in Sources */,
+				3B4C159C2E4F657C00A05A4B /* EditProfileLocalization.swift in Sources */,
 				3B4C158C2E4F58D300A05A4B /* PhotoPickerProxy.swift in Sources */,
 				3B4C158D2E4F58D300A05A4B /* ProfileHeaderView.swift in Sources */,
 				3B4C158E2E4F58D300A05A4B /* ProfileRow.swift in Sources */,

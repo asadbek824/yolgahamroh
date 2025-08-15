@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreModels
 
 @MainActor
 protocol ProfileNavigating: AnyObject {
@@ -33,9 +34,19 @@ final class ProfileCoordinator: ObservableObject, ProfileNavigating {
     func destination(for route: ProfileRoute) -> some View {
         switch route {
         case .editProfile:
-            EditProfileView()
+            let user = UserRepository.shared.currentUser
+                ?? UserModel(name: "", email: "", telephoneNumber: "")
+            let vm = EditProfileViewModel(
+                user: user,
+                updateUser: UpdateUserUseCase(repo: UserRepository.shared),
+                onSuccess: { [weak self] in
+                    self?.pop()
+                }
+            )
+            EditProfileView(viewModel: vm)
                 .navigationTitle(localization.editProfile)
                 .navigationBarTitleDisplayMode(.inline)
+                .toolbar(.hidden, for: .tabBar)
 
         case .paymentMethods:
             PaymentMethodsView()
