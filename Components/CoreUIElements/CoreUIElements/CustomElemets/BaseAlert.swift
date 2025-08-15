@@ -100,6 +100,11 @@ public struct BaseAlertModifier: ViewModifier {
             if isPresented {
                 Color.black.opacity(0.35)
                     .ignoresSafeArea()
+                    .onTapGesture {
+                        withAnimation {
+                            isPresented = false
+                        }
+                    }
                     .transition(.opacity)
 
                 VStack(spacing: 18) {

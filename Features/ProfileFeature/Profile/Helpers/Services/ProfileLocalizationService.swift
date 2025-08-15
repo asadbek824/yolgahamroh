@@ -26,21 +26,21 @@ protocol ProfileLocalizationServiceProtocol {
 }
 
 final class ProfileLocalizationService: ProfileLocalizationServiceProtocol {
-    let locale = DesignSystemProvider.DesignSystemsStrings.self
-    
-    var navTitle: String { locale.profileTitle }
-    var accountSet: String { locale.aboutUs }
-    var editProfile: String { locale.editProfile }
-    var paymentMethods: String { locale.paymentMethod }
-    var notifications: String { locale.notificationTitle }
-    var rideHistory: String { locale.myTripsTitle }
-    var support: String { locale.helpTitle }
-    var supAndHelp: String { locale.helpTitle } // Change
-    var singOut: String {locale.logoutButton }
-    var cancelButton: String { locale.cancelButton }
-    var photoPermissionTitle: String { locale.photoPermissionTitle }
-    var photoPermissionMessage: String { locale.photoPermissionMessage }
-    var openSettingsButton: String { locale.openSettingsButton }
-    var logoutTitle: String { locale.logoutTitle }
-    var logoutMessage: String { locale.logoutMessage }
+    private let L = DesignSystemProvider.DesignSystemsStrings.self
+
+    var navTitle: String { L.profileTitle }
+    var accountSet: String { L.aboutUs }
+    var editProfile: String { L.editProfile }
+    var paymentMethods: String { L.paymentMethod }
+    var notifications: String { L.notificationTitle }
+    var rideHistory: String { L.myTripsTitle }
+    var support: String { L.helpTitle }
+    var supAndHelp: String { L.helpTitle }
+    var singOut: String { L.logoutButton }
+    var cancelButton: String { L.cancelButton }
+    var photoPermissionTitle: String { L.photoPermissionTitle }
+    var photoPermissionMessage: String { L.photoPermissionMessage }
+    var openSettingsButton: String { L.openSettingsButton }
+    var logoutTitle: String { L.logoutTitle }
+    var logoutMessage: String { L.logoutMessage }
 }

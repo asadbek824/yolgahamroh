@@ -10,7 +10,7 @@ import SwiftUI
 struct ProfileRow: View {
     let model: ProfileRowModel
     var action: () -> Void
-    
+
     var body: some View {
         Button(role: model.role, action: action) {
             HStack(spacing: 12) {
@@ -22,7 +22,7 @@ struct ProfileRow: View {
                 }
                 .frame(width: 32, height: 32)
                 .accessibilityHidden(true)
-                
+
                 VStack(alignment: .leading, spacing: 2) {
                     Text(model.title)
                         .foregroundStyle(model.role == .destructive ? .red : .primary)
@@ -33,7 +33,7 @@ struct ProfileRow: View {
                             .lineLimit(2)
                     }
                 }
-                
+
                 Spacer()
                 if model.role != .destructive {
                     Image(systemName: "chevron.right")

@@ -5,20 +5,35 @@
 //  Created by Ilnar Isakov on 14.08.2025.
 //
 
-import Foundation
 import SwiftUI
+import CoreServices
+import CoreModels
+import CoreStorage
 
 public struct ProfileAssembly {
-    public init() { }
-    
+    public init() {}
+
     @MainActor
     public func assemble() -> some View {
-        let localization = ProfileLocalizationService()
-        let sections = ProfileSectionsService(localization: localization)
+        let userRepo: UserRepositoryProtocol = UserRepository.shared
+        let photoPermission: PhotoPermissionChecking = PhotoPermissionService()
+        let localization: ProfileLocalizationServiceProtocol = ProfileLocalizationService()
+        let sections: ProfileSectionsServiceProtocol = ProfileSectionsService(localization: localization)
+
+        let loadUser = LoadUserUseCase(userRepo: userRepo)
+        let updateAvatar = UpdateAvatarUseCase(userRepo: userRepo)
+
+        let coordinator = ProfileCoordinator(localization: localization)
+
         let vm = ProfileViewModel(
-            localizationService: localization,
-            sectionsService: sections
+            localization: localization,
+            sectionsService: sections,
+            photoPermission: photoPermission,
+            loadUser: loadUser,
+            updateAvatar: updateAvatar,
+            router: coordinator
         )
-        return ProfileContentView(viewModel: vm)
+
+        return ProfileScreen(viewModel: vm, coordinator: coordinator)
     }
 }

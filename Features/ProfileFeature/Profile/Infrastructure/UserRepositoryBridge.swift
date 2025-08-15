@@ -1,0 +1,20 @@
+//
+//  UserRepositoryBridge.swift
+//  Profile
+//
+//  Created by Yo'ldoshev Asadbek on 15/08/2025.
+//
+
+import Foundation
+import CoreModels
+import CoreServices
+
+final class UserRepository: UserRepositoryProtocol {
+    static let shared = UserRepository()
+    private let service = UserService.shared
+
+    var currentUser: UserModel? { service.currentUser }
+    var avatarData: Data? { service.avatarData }
+
+    func updateAvatarData(_ data: Data) { service.updateAvatarData(data) }
+}

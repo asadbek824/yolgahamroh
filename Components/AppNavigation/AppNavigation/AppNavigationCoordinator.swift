@@ -9,7 +9,7 @@ import SwiftUI
 
 final class AppNavigationCoordinator: ObservableObject {
     enum Tab {
-        case home, trips, favorites, profile
+        case home, profile
     }
 
     @Published var selectedTab: Tab = .home

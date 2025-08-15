@@ -17,16 +17,10 @@ struct ProfileHeaderView: View {
         VStack(spacing: 12) {
             AvatarView(data: avatarData, onTap: onAvatarTap)
                 .frame(width: 96, height: 96)
-
             VStack(spacing: 4) {
-                Text(user.name)
-                    .font(.title3.weight(.semibold))
-                Text(user.email)
-                    .font(.subheadline)
-                    .foregroundStyle(.secondary)
-                Text(user.telephoneNumber)
-                    .font(.subheadline)
-                    .foregroundStyle(.secondary)
+                Text(user.name).font(.title3.weight(.semibold))
+                Text(user.email).font(.subheadline).foregroundStyle(.secondary)
+                Text(user.telephoneNumber).font(.subheadline).foregroundStyle(.secondary)
             }
         }
         .frame(maxWidth: .infinity)

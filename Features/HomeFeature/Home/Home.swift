@@ -37,39 +37,7 @@ public struct HomeView: View {
                 placement: .navigationBarDrawer(displayMode: .always),
                 prompt: "serach"
             )
-            .background(backgroundImage)
             .dismissKeyboardOnTapGesture()
-        }
-    }
-    
-    private var backgroundImage: some View {
-        GeometryReader { geometry in
-            ZStack {
-                Image("uzbek_background")
-                    .resizable()
-                    .scaledToFill()
-                    .ignoresSafeArea()
-                    .overlay(Color.white.opacity(0.9))
-                
-                LinearGradient(
-                    gradient: Gradient(colors: [
-                        Color.black.opacity(0.5),
-                        Color.clear
-                    ]),
-                    startPoint: .top,
-                    endPoint: .center
-                )
-                
-                LinearGradient(
-                    gradient: Gradient(colors: [
-                        Color.clear,
-                        Color.black.opacity(0.4)
-                    ]),
-                    startPoint: .center,
-                    endPoint: .bottom
-                )
-            }
-            .ignoresSafeArea()
         }
     }
     

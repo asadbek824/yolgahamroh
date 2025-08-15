@@ -13,11 +13,8 @@ struct AvatarView: View {
 
     var body: some View {
         Group {
-            if let data,
-               let uiImage = UIImage(data: data) {
-                Image(uiImage: uiImage)
-                    .resizable()
-                    .scaledToFill()
+            if let data, let uiImage = UIImage(data: data) {
+                Image(uiImage: uiImage).resizable().scaledToFill()
             } else {
                 ZStack {
                     Circle().fill(.ultraThinMaterial)
@@ -30,6 +27,7 @@ struct AvatarView: View {
         .clipShape(Circle())
         .shadow(color: .black.opacity(0.08), radius: 6, x: 0, y: 4)
         .contentShape(Circle())
-        .onTapGesture { onTap() }
+        .onTapGesture(perform: onTap)
     }
 }
+
