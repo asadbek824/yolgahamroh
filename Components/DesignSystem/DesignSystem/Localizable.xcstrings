@@ -24,6 +24,29 @@
         }
       }
     },
+    "account_settings_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Account settings"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Настройки аккаунта"
+          }
+        },
+        "uz" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hisob sozlamalari"
+          }
+        }
+      }
+    },
     "add_trip" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -825,6 +848,29 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Qayerdan"
+          }
+        }
+      }
+    },
+    "help_and_support_title" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Help and Support"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Помощь и поддержка"
+          }
+        },
+        "uz" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yordam va qo‘llab-quvvatlash"
           }
         }
       }
@@ -2159,6 +2205,29 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Umumiy narx"
+          }
+        }
+      }
+    },
+    "translated" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Change language"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сменить язык"
+          }
+        },
+        "uz" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tilni o‘zgartirish"
           }
         }
       }

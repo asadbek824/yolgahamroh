@@ -9,13 +9,13 @@ import DesignSystem
 
 protocol ProfileLocalizationServiceProtocol {
     var navTitle: String { get }
-    var accountSet: String { get }
+    var accountSettingsTitle: String { get }
     var editProfile: String { get }
     var paymentMethods: String { get }
     var notifications: String { get }
     var rideHistory: String { get }
     var support: String { get }
-    var supAndHelp: String { get }
+    var helpAndSupportTitle: String { get }
     var singOut: String { get }
     var cancelButton: String { get }
     var photoPermissionTitle: String { get }
@@ -23,19 +23,20 @@ protocol ProfileLocalizationServiceProtocol {
     var openSettingsButton: String { get }
     var logoutTitle: String { get }
     var logoutMessage: String { get }
+    var translatedTitle: String { get }
 }
 
 final class ProfileLocalizationService: ProfileLocalizationServiceProtocol {
     let locale = DesignSystemProvider.DesignSystemsStrings.self
     
     var navTitle: String { locale.profileTitle }
-    var accountSet: String { locale.aboutUs }
+    var accountSettingsTitle: String { locale.accountSettingsTitle }
     var editProfile: String { locale.editProfile }
     var paymentMethods: String { locale.paymentMethod }
     var notifications: String { locale.notificationTitle }
     var rideHistory: String { locale.myTripsTitle }
     var support: String { locale.helpTitle }
-    var supAndHelp: String { locale.helpTitle } // Change
+    var helpAndSupportTitle: String { locale.helpAndSupportTitle }
     var singOut: String {locale.logoutButton }
     var cancelButton: String { locale.cancelButton }
     var photoPermissionTitle: String { locale.photoPermissionTitle }
@@ -43,4 +44,5 @@ final class ProfileLocalizationService: ProfileLocalizationServiceProtocol {
     var openSettingsButton: String { locale.openSettingsButton }
     var logoutTitle: String { locale.logoutTitle }
     var logoutMessage: String { locale.logoutMessage }
+    var translatedTitle: String { locale.translatedTitle }
 }

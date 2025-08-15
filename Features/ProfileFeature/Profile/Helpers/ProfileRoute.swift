@@ -12,6 +12,7 @@ enum ProfileRoute: Hashable {
     case paymentMethods
     case notifications
     case rideHistory
+    case languageChange
     case support
     case logout
 }

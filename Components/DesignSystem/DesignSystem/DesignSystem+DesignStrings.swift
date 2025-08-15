@@ -16,8 +16,6 @@ public extension DesignSystemProvider {
         }
         public static var homeTitle: String { localized("home_title") }
         public static var driverTitle: String { localized("driver_title") }
-        public static var myTripsTitle: String { localized("my_trips_title") }
-        public static var profileTitle: String { localized("profile_title") }
         public static var searchPlaceholder: String { localized("search_placeholder") }
         public static var bookButton: String { localized("book_button") }
         public static var seatsAvailable: String { localized("seats_available") }
@@ -60,7 +58,6 @@ public extension DesignSystemProvider {
         public static var luggageAllowed: String { localized("luggage_allowed") }
         public static var petsAllowed: String { localized("pets_allowed") }
         public static var smokingAllowed: String { localized("smoking_allowed") }
-        public static var paymentMethod: String { localized("payment_method") }
         public static var cashPayment: String { localized("cash_payment") }
         public static var seatsTaken: String { localized("seats_taken") }
         public static var availableSeats: String { localized("available_seats") }
@@ -70,7 +67,6 @@ public extension DesignSystemProvider {
         public static var sortByDistance: String { localized("sort_by_distance") }
         public static var clearFilters: String { localized("clear_filters") }
         public static var applyFilters: String { localized("apply_filters") }
-        public static var notificationTitle: String { localized("notification_title") }
         public static var enableNotifications: String { localized("enable_notifications") }
         public static var disableNotifications: String { localized("disable_notifications") }
         public static var tripCanceled: String { localized("trip_canceled") }
@@ -84,10 +80,8 @@ public extension DesignSystemProvider {
         public static var findADriver: String { localized("find_a_driver") }
         public static var findAPassenger: String { localized("find_a_passenger") }
         public static var appVersion: String { localized("app_version") }
-        public static var helpTitle: String { localized("help_title") }
         public static var termsTitle: String { localized("terms_title") }
         public static var privacyPolicy: String { localized("privacy_policy") }
-        public static var aboutUs: String { localized("about_us") }
         public static var contactUs: String { localized("contact_us") }
         public static var rateApp: String { localized("rate_app") }
         public static var shareApp: String { localized("share_app") }
@@ -115,17 +109,22 @@ public extension DesignSystemProvider {
         public static var tripCreated: String { localized("trip_created") }
         public static var tripUpdated: String { localized("trip_updated") }
         public static var tripDeleted: String { localized("trip_deleted") }
+        
+        //MARK: These words are used: Features -> Profile
+        public static var profileTitle: String { localized("profile_title") }
+        public static var aboutUs: String { localized("about_us") }
+        public static var accountSettingsTitle: String { localized("account_settings_title") }
+        public static var paymentMethod: String { localized("payment_method") }
         public static var editProfile: String { localized("edit_profile") }
+        public static var notificationTitle: String { localized("notification_title") }
+        public static var myTripsTitle: String { localized("my_trips_title") }
+        public static var helpTitle: String { localized("help_title") }
+        public static var helpAndSupportTitle: String { localized("help_and_support_title") }
         public static var photoPermissionTitle: String { localized("photo_permission_title") }
         public static var photoPermissionMessage: String { localized("photo_permission_message") }
         public static var openSettingsButton: String { localized("open_settings_button") }
         public static var logoutTitle: String { localized("logout_title") }
         public static var logoutMessage: String { localized("logout_message") }
+        public static var translatedTitle: String { localized("translated") }
     }
 }
-
-//MARK: Изменил на homeTitle, settingsTitle
-/*
- public static var homeNavTitle: String { localized("home_nav_title") }
- public static var settings: String { localized("settings") }
- */

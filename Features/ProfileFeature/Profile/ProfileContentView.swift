@@ -67,6 +67,11 @@ extension ProfileContentView {
                     TripsListView()
                         .navigationTitle(viewModel.localizationService.rideHistory)
                         .navigationBarTitleDisplayMode(.inline)
+                
+                case .languageChange:
+                    LanguageChangeView()
+                        .navigationTitle(viewModel.localizationService.translatedTitle)
+                        .navigationBarTitleDisplayMode(.inline)
 
                 case .support:
                     HelpView()
